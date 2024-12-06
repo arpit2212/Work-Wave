@@ -64,19 +64,20 @@ Ensure you have the following installed:
 
 
 2. Install dependencies:
-
+   ```bash
 bash
 Copy code
 npm install
 
 
 3. Set up environment variables:
-
+    ```bash
 Create a .env file in the root directory.
 
 Add the following variables:
 
 env
+    ```bash
 Copy code
 VITE_SUPABASE_URL=<Your Supabase Project URL>
 VITE_SUPABASE_ANON_KEY=<Your Supabase Public Anon Key>
@@ -88,33 +89,11 @@ Supabase: Go to your Supabase Dashboard and copy the Project URL and Anon Key fr
 Clerk.js: Access the API keys from the Clerk Dashboard under the project's API settings.
 
 4. Start the development server:
-
+    ```bash
 bash
 Copy code
 npm run dev
 
 Access the application: Open your browser and navigate to http://localhost:5173.
-
-Folder Structure
-bash
-Copy code
-workwave/
-├── src/
-│   ├── components/     # Reusable components
-│   ├── pages/          # Page-level components
-│   ├── styles/         # Styling files
-│   ├── utils/          # Utility functions
-│   └── services/       # API service handlers
-├── backend/
-│   ├── models/         # Database models
-│   ├── routes/         # API endpoints
-│   ├── controllers/    # Business logic
-│   └── middleware/     # Authentication and validation
-└── README.md
-
-Setting up Supabase
-
-Create a new project on Supabase.
-
 
 Happy coding! 🚀
