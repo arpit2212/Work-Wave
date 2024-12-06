@@ -4,18 +4,24 @@ import AppLayout from "./layouts/app-layout";
 
 import { ThemeProvider } from "./components/theme-provider";
 
-import LandingPage from "./pages/Landing"; // Ensure the filename matches exactly
+// Ensure the filename matches exactly
 import Onboarding from "./pages/Onboarding";
-import PostJob from "./pages/PostJob";
 
-import MyJobs from "./pages/MyJobs";
+
+
 
 import JobPage from "./pages/Job";
 
 import "./App.css";
-import ProtectedRoute from "./components/ProtectedRoute";
-import JobListing from "./pages/JobListing";
-import SavedJobs from "./pages/SavedJobs";
+
+
+
+import PostJob from "./Pages/post-job";
+import LandingPage from "./Pages/Landing";
+import MyJobs from "./Pages/my-jobs";
+import ProtectedRoute from "./components/protected-rote";
+import JobListing from "./Pages/job-listing";
+import SavedJobs from "./Pages/saved-job";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +43,7 @@ const router = createBrowserRouter([
         path: "/jobs",
         element: (
           <ProtectedRoute>
-            <JobListing />
+            <JobListing/>
           </ProtectedRoute>
         ),
       },
@@ -45,7 +51,7 @@ const router = createBrowserRouter([
         path: "/post-job",
         element: (
           <ProtectedRoute>
-            <PostJob />
+            <PostJob/>
           </ProtectedRoute>
         ),
       },
@@ -53,7 +59,7 @@ const router = createBrowserRouter([
         path: "/my-jobs",
         element: (
           <ProtectedRoute>
-            <MyJobs />
+            <MyJobs/>
           </ProtectedRoute>
         ),
       },
@@ -61,7 +67,7 @@ const router = createBrowserRouter([
         path: "/saved-jobs",
         element: (
           <ProtectedRoute>
-            <SavedJobs />
+            <SavedJobs/>
           </ProtectedRoute>
         ),
       },
