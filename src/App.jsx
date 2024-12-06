@@ -10,7 +10,7 @@ import { ThemeProvider } from "./components/theme-provider";
 
 
 
-import JobPage from "./pages/Job";
+
 
 import "./App.css";
 
@@ -23,6 +23,7 @@ import ProtectedRoute from "./components/protected-rote";
 import JobListing from "./Pages/job-listing";
 import SavedJobs from "./Pages/saved-job";
 import Onboarding from "./Pages/onboarding";
+import JobPage from "./Pages/Job";
 
 const router = createBrowserRouter([
   {
