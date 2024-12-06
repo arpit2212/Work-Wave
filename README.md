@@ -55,45 +55,5 @@ Ensure you have the following installed:
 
 ---
 
-### Steps
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/workwave.git
-   cd workwave
-
-
-2. Install dependencies:
-   ```bash
-bash
-Copy code
-npm install
-
-
-3. Set up environment variables:
-    ```bash
-Create a .env file in the root directory.
-
-Add the following variables:
-
-env
-    ```bash
-Copy code
-VITE_SUPABASE_URL=<Your Supabase Project URL>
-VITE_SUPABASE_ANON_KEY=<Your Supabase Public Anon Key>
-VITE_CLERK_FRONTEND_API=<Your Clerk Frontend API Key>
-VITE_CLERK_JWT_KEY=<Your Clerk JWT Key>
-To retrieve these keys:
-
-Supabase: Go to your Supabase Dashboard and copy the Project URL and Anon Key from the API Settings page.
-Clerk.js: Access the API keys from the Clerk Dashboard under the project's API settings.
-
-4. Start the development server:
-    ```bash
-bash
-Copy code
-npm run dev
-
-Access the application: Open your browser and navigate to http://localhost:5173.
-
-Happy coding! 🚀
+# Happy coding! 🚀
