@@ -9,16 +9,18 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Link } from "react-router-dom";
-import useFetch from "@/hooks/use-fetch";
+
 import { deleteJob, saveJob } from "@/api/apiJobs";
 import { useUser } from "@clerk/clerk-react";
-import { useEffect, useState } from "react";
+
 import { BarLoader } from "react-spinners";
+import useFetch from "@/hooks/use-fetch";
+import { useEffect, useState } from "react";
 
 const JobCard = ({
   job,
   savedInit = false,
-  onJobAction = () => {},
+  onJobSaved = () => {},
   isMyJob = false,
 }) => {
   const [saved, setSaved] = useState(savedInit);
@@ -30,17 +32,19 @@ const JobCard = ({
   });
 
   const {
-    loading: loadingSavedJob,
-    data: savedJob,
     fn: fnSavedJob,
-  } = useFetch(saveJob);
+    data: savedJob,
+    loading: loadingSavedJob,
+  } = useFetch(saveJob, {
+    alreadySaved: saved,  // Assuming "saved" is a state indicating if the job is saved
+  });
 
   const handleSaveJob = async () => {
     await fnSavedJob({
       user_id: user.id,
       job_id: job.id,
     });
-    onJobAction();
+    onJobSaved();
   };
 
   const handleDeleteJob = async () => {
