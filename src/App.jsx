@@ -5,7 +5,7 @@ import AppLayout from "./layouts/app-layout";
 import { ThemeProvider } from "./components/theme-provider";
 
 // Ensure the filename matches exactly
-import Onboarding from "./pages/Onboarding";
+
 
 
 
@@ -22,6 +22,7 @@ import MyJobs from "./Pages/my-jobs";
 import ProtectedRoute from "./components/protected-rote";
 import JobListing from "./Pages/job-listing";
 import SavedJobs from "./Pages/saved-job";
+import Onboarding from "./Pages/onboarding";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
         path: "/onboarding",
         element: (
           <ProtectedRoute>
-            <Onboarding />
+            <Onboarding/>
           </ProtectedRoute>
         ),
       },
