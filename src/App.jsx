@@ -4,18 +4,18 @@ import AppLayout from "./layouts/app-layout";
 
 import { ThemeProvider } from "./components/theme-provider";
 
-import LandingPage from "./pages/landing";
-import Onboarding from "./pages/onboarding";
-import PostJob from "./pages/post-job";
+import LandingPage from "./pages/Landing"; // Ensure the filename matches exactly
+import Onboarding from "./pages/Onboarding";
+import PostJob from "./pages/PostJob";
 
-import MyJobs from "./pages/my-jobs";
+import MyJobs from "./pages/MyJobs";
 
-import JobPage from "./pages/job";
+import JobPage from "./pages/Job";
 
 import "./App.css";
-import ProtectedRoute from "./components/protected-rote";
-import JobListing from "./Pages/job-listing";
-import SavedJobs from "./Pages/saved-job";
+import ProtectedRoute from "./components/ProtectedRoute";
+import JobListing from "./pages/JobListing";
+import SavedJobs from "./pages/SavedJobs";
 
 const router = createBrowserRouter([
   {
