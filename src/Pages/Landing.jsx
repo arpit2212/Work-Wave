@@ -31,18 +31,19 @@ const LandingPage = () => {
         </p>
         
       </section>
-      <div className="flex gap-6 justify-center">
-        <Link to={"/jobs"}>
-        <Button variant="secondary" className="w-56 h-16 ">
-            Find Jobs
-          </Button>
-        </Link>
-        <Link to={"/post-job"}>
-        <Button variant="destructive" className="w-56 h-16 ">
-            Post a Job
-          </Button>
-        </Link>
-      </div>
+      <div className="flex gap-6 justify-center flex-wrap">
+  <Link to={"/jobs"}>
+    <Button variant="secondary" className="w-56 h-16 sm:w-48 sm:h-12">
+      Find Jobs
+    </Button>
+  </Link>
+  <Link to={"/post-job"}>
+    <Button variant="destructive" className="w-56 h-16 sm:w-48 sm:h-12">
+      Post a Job
+    </Button>
+  </Link>
+</div>
+
       <Carousel
         plugins={[
           Autoplay({
